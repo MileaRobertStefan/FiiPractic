@@ -1,0 +1,42 @@
+<div class="container custom-container-2">
+
+    <div class="no-data text-center" *ngIf="Movie.length == 0">
+        <p>There is no movie added yet!</p>
+        <button class="btn btn-outline-primary" routerLink="/create-movie">Add Movies</button>
+    </div>
+
+    <div *ngIf="Movie.length !== 0">
+        <h3 class="mb-3 text-center">Movies List</h3>
+
+        <div color="primary" class="col-md-12">
+            <table  class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Movie Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Length</th>
+                        <th scope="col">Picture</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of Movie">
+                        <td>{{movie.id}}</td>
+                        <td>{{movie.movie_name}}</td>
+                        <td>{{movie.movie_genre}}</td>
+                        <td>{{movie.movie_length}}</td>
+                        <td>{{movie.movie_thumbnail_picture}}</td>
+                        <td>{{movie.movie_rating}}</td>
+                        <td>{{movie.movie_description}}</td>
+                        <td>
+                            <span class="edit" routerLink="/movie-edit/{{movie.id}}">Edit</span>
+                            <span class="delete" (click)="deleteMovie(movie.id)">Delete</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

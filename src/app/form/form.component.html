@@ -1,0 +1,51 @@
+<mat-card>
+  <form class="example-form" [formGroup]="myForm">
+
+    <mat-form-field class="form-field">
+      <input class="" type="text" matInput placeholder="Movie name" formControlName="movie_name" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input type="text" matInput placeholder="Movie genre" formControlName="movie_genre" [matAutocomplete]="auto"
+        required>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options " [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+
+    <mat-form-field class="form-field">
+      <input type="number" min="0" max="1000" matInput placeholder="Movie duration in minutes"
+        formControlName="movie_length" required>
+    </mat-form-field>
+
+    <div>
+      <input type='file' (change)="processFile($event)" formControlName="movie_thumbnail_picture">
+    </div>
+
+
+
+
+    <rating-star max=10 (onRating)=onRating($event)></rating-star>
+
+    <mat-form-field class="form-field">
+      <input type="number" min="0" max="10" matInput placeholder="Movie rating" formControlName="movie_rating" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input type="date" matInput formControlName="movie_premier" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <textarea type="text" matInput placeholder="Movie description" formControlName="movie_description">  </textarea>
+    </mat-form-field>
+  </form>
+
+  <div>
+    <button [disabled]="myForm.invalid" style="margin-left: 20px; margin-top: 10px;" mat-raised-button color="primary"
+      mat-button (click)="this.onSubmit()"> Submit </button>
+  </div>
+
+</mat-card>

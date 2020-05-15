@@ -1,0 +1,82 @@
+{
+  "movies": [
+    {
+      "movie_name": "Milea",
+      "movie_genre": "Action",
+      "movie_length": 60,
+      "movie_thumbnail_picture": "",
+      "movie_rating": 3,
+      "movie_description": "Cel mai smecher",
+      "movie_premier": "2020-05-13",
+      "id": 1
+    },
+    {
+      "movie_name": "Test",
+      "movie_genre": "Action",
+      "movie_length": 123,
+      "movie_thumbnail_picture": "",
+      "movie_rating": 3,
+      "movie_description": "",
+      "movie_premier": "2020-05-12",
+      "id": 2
+    },
+    {
+      "movie_name": "asd",
+      "movie_genre": "Action",
+      "movie_length": 3,
+      "movie_thumbnail_picture": "C:\\fakepath\\starRating.png",
+      "movie_rating": 4,
+      "movie_description": "",
+      "movie_premier": "2020-05-13",
+      "id": 3
+    },
+    {
+      "movie_name": "Cel mai smecher film din euroap",
+      "movie_genre": "Mystery",
+      "movie_length": 120,
+      "movie_thumbnail_picture": "",
+      "movie_rating": 10,
+      "movie_description": "Cel mai tare test din romanica",
+      "movie_premier": "2020-05-28",
+      "id": 4
+    },
+    {
+      "movie_name": "Aasd",
+      "movie_genre": "Adventure",
+      "movie_length": 7,
+      "movie_thumbnail_picture": "",
+      "movie_rating": 1,
+      "movie_description": "Amb",
+      "movie_premier": "2020-05-20",
+      "id": 5
+    }
+  ],
+  "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Crime",
+    "Drama",
+    "Fantasy",
+    "Historical",
+    "Historical fiction",
+    "Horror",
+    "Magical realism",
+    "Mystery",
+    "Paranoid fiction",
+    "Philosophical",
+    "Political",
+    "Romance",
+    "Saga",
+    "Satire",
+    "Science fiction",
+    "Social",
+    "Speculative",
+    "Thriller",
+    "Urban",
+    "Western",
+    "Animation",
+    "Live-action scripted",
+    "Live-action unscripted"
+  ]
+}
